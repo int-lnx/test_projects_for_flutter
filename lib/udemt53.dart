@@ -61,8 +61,11 @@ class Ogrenciler {
     }
 
   }
-
-
+  liste_goster(){
+    for(Ogrenci X in tum_ogrenciler){
+      return X;
+    }
+  }
 
   }
 
