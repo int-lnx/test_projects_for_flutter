@@ -1,5 +1,7 @@
 
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main(){
@@ -48,9 +50,15 @@ class HomePage extends StatelessWidget {
 }
 
 class Ogrenciler {
-
+  List<Ogrenci> tum_ogrenciler = List.filled(100, Ogrenci("X",0,0));
   random_list(){
-    print("x");
+
+    for(int i=0; i<100; i++){
+      tum_ogrenciler[i].no=i;
+      tum_ogrenciler[i].name="X$i";
+      tum_ogrenciler[i].no=Random().nextInt(900)+100;
+
+    }
 
   }
 
@@ -62,8 +70,9 @@ class Ogrenciler {
 class Ogrenci {
   String name="X";
   int id=0;
+  int no=0;
 
-  Ogrenci(this.name, this.id);
+  Ogrenci(this.name, this.id, this.no);
 
   @override
   String toString() {
