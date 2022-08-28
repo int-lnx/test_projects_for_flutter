@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Text(tum_ogrenciler.map((e) => e.name).toString(),),
+          tum_ogrenciler.map((e) => ListTile(title: e.name, ),).toList();
 
 
         ],
