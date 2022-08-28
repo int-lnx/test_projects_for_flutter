@@ -41,6 +41,8 @@ class HomePage extends StatelessWidget {
     return Center(
       child: Column(
         children: [
+          Text(tum_ogrenciler.map((e) => e.name).toString(),),
+
 
         ],
       ),
@@ -49,8 +51,10 @@ class HomePage extends StatelessWidget {
   }
 }
 
+List<Ogrenci> tum_ogrenciler = List.filled(100, Ogrenci("X",0,0));
+
+
 class Ogrenciler {
-  List<Ogrenci> tum_ogrenciler = List.filled(100, Ogrenci("X",0,0));
   random_list(){
 
     for(int i=0; i<100; i++){
@@ -66,6 +70,7 @@ class Ogrenciler {
       return X;
     }
   }
+
 
   }
 
