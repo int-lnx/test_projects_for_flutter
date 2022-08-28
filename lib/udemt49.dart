@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main(){
 
-  runApp(MyApp);
+  runApp(MyApp(),);
 
 
 }
@@ -16,7 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: HomePage(),
+        appBar: AppBar(title: Text("With Enes Ç."),),
+
+      ),
     );
   }
 }
@@ -27,6 +32,27 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+
+
+    );
   }
 }
+
+class Caylilar {
+  String name="X";
+  int yetenek=0;
+  Caylilar murat= Caylilar(name: "murat",);
+  var enes=Caylilar.puan(yetenek: 10);
+
+
+  Caylilar({required this.name}){}
+  Caylilar.puan({required int yetenek}){
+    this.yetenek=yetenek;
+  }
+
+
+
+}
+
+
