@@ -29,8 +29,7 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatelessWidget {
 
-  Caylilar murat= Caylilar(name: "murat",);
-  var enes=Caylilar.puan(yetenek: 10);
+
 
 
    HomePage({Key? key}) : super(key: key);
@@ -40,7 +39,7 @@ class HomePage extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Text(murat.call_name(),),
+
         ],
       ),
 
@@ -48,30 +47,28 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class Caylilar {
+class Ogrenciler {
+
+  random_list(){
+    print("x");
+
+  }
+
+
+
+  }
+
+
+class Ogrenci {
   String name="X";
-  int yetenek=0;
-  Caylilar({required this.name}){}
-  Caylilar.puan({required this.yetenek}){
-    this.yetenek=yetenek;
+  int id=0;
+
+  Ogrenci(this.name, this.id);
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "ogrenci id: $id ve ogrneci adı: $name";
   }
-
-  String call_name(){
-    return name;
-  }
-  int call_yetenek(){
-    return yetenek;
-  }
-
-
-printle (String name, int yetenek){
-
-    if(name=="murat"){
-    return name;
-    }
-    else {
-      return Caylilar.puan(yetenek: yetenek);
-    }
-}
 
 }
